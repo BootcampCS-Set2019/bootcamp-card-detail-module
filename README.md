@@ -1,0 +1,1 @@
+# bootcamp-card-detail-module
