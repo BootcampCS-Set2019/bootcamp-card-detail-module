@@ -109,9 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				BD47B44E234E3B3300E189B9 /* Root */,
+				BD47B44F234E3B7200E189B9 /* CardDetailModuleBuilder.swift */,
 				BD27B7EB234E1FC300F0E8E4 /* CardDetailModule.h */,
 				BD27B7EC234E1FC300F0E8E4 /* Info.plist */,
-				BD47B44F234E3B7200E189B9 /* CardDetailModuleBuilder.swift */,
 			);
 			path = CardDetailModule;
 			sourceTree = "<group>";

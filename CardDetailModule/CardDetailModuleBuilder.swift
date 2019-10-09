@@ -8,7 +8,7 @@
 
 import Entities
 
-public class RecommendedCardsModuleBuilder {
+public class CardDetailModuleBuilder {
     public static func buildRoot(card: Card) -> UIViewController {
         return CardDetailViewController(card: card)
     }
