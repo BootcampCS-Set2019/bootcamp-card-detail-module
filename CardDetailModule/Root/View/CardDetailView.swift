@@ -10,16 +10,23 @@ import Entities
 import Components
 import Resources
 import Kingfisher
+import SnapKit
 
-struct CardDetailViewModel {
+public struct CardDetailViewModel {
     var card: Card
 }
 
-class CardDetailView: UIView {
+public class CardDetailView: UIView {
 
     lazy var backgroundImage: UIImageView = {
         var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .imageView,
+                                      additionalName: "Background",
+                                      module: .cardDetail,
+                                      number: nil)
+            .constructedName
         return imageView
     }()
 
@@ -37,6 +44,12 @@ class CardDetailView: UIView {
         var button = UIButton()
         let imageView = UIImageView()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .button,
+                                      additionalName: "Close",
+                                      module: .cardDetail,
+                                      number: nil)
+            .constructedName
         return button
     }()
 
@@ -46,16 +59,22 @@ class CardDetailView: UIView {
         }
     }
 
-//    lazy var favoriteButton: UIButton = {
-//        var button = UIButton()
-//        button.backgroundColor = MagicDesignSystem.Colors.clear
-//        button.titleLabel?.textColor = MagicDesignSystem.Colors.whiteText
-//        button.titleLabel?.font = MagicDesignSystem.Font.systemBold.of(size: 18)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        return button
-//    }()
+    lazy var favoriteButton: UIButton = {
+        var button = MagicDesignSystem.Buttons.bottomHorizontalLarge.uiButton(text: "Add card")
+        button.backgroundColor = MagicDesignSystem.Colors.clear
+        button.titleLabel?.textColor = MagicDesignSystem.Colors.whiteText
+        button.titleLabel?.font = MagicDesignSystem.Font.systemBold.of(size: 18)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .button,
+                                      additionalName: "Favorite",
+                                      module: .cardDetail,
+                                      number: nil)
+            .constructedName
+        return button
+    }()
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
     }
@@ -65,15 +84,26 @@ class CardDetailView: UIView {
     }
 
     func applyViewModel() {
-        if let urlString = self.viewModel?.card.imageUrl {
-            let url = URL(string: urlString)
-            self.cardImage.kf.setImage(with: url)
+        guard let viewModelAux = viewModel else {
+            return
         }
+        guard let imageUrl = viewModelAux.card.imageUrl else {
+            return
+        }
+        let url = URL(string: imageUrl)
+        self.cardImage.kf.setImage(with: url)
+        self.cardImage.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .imageView,
+                                      additionalName: nil,
+                                      module: .cardDetail,
+                                      number: nil)
+            .constructedName
+
     }
 }
 
 extension CardDetailView: ViewCodable {
-    func buildHierarchy() {
+    public func buildHierarchy() {
         self.addSubview(backgroundImage)
         backgroundImage.image = MagicDesignSystem.Assets.background
 
@@ -83,32 +113,38 @@ extension CardDetailView: ViewCodable {
         self.addSubview(closeButton)
         closeButton.setImage(MagicDesignSystem.Assets.closeButton, for: .normal)
 
-//        self.addSubview(favoriteButton)
-//        favoriteButton.titleLabel?.text = "Add card"
+        self.addSubview(favoriteButton)
     }
 
-    func buildConstraints() {
-        backgroundImage.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
-        backgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
-        backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
-        backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
+    public func buildConstraints() {
+        let screenSize = UIScreen.main.bounds.size
 
-        cardImage.topAnchor.constraint(equalTo: topAnchor, constant: 150).isActive = true
-        cardImage.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0).isActive = true
-        cardImage.heightAnchor.constraint(equalToConstant: 400).isActive = true
-        cardImage.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        self.backgroundImage.snp.makeConstraints { (maker) in
+            maker.top.bottom.left.right.equalToSuperview()
+        }
 
-        closeButton.topAnchor.constraint(equalTo: topAnchor, constant: 40).isActive = true
-        closeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        closeButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        closeButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        self.cardImage.snp.makeConstraints { (maker) in
+            maker.width.equalTo(20 * screenSize.width / 33)
+            maker.height.equalTo(screenSize.height / 2)
+            maker.centerX.equalTo(self.snp.centerX)
+            maker.centerY.equalTo(self.snp.centerY)
+        }
 
-//        favoriteButton.topAnchor.constraint(equalTo: cardImage.bottomAnchor, constant: 50).isActive = true
-//        favoriteButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0).isActive = true
-//        favoriteButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-//        favoriteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+        self.closeButton.snp.makeConstraints { (maker) in
+            maker.top.equalTo(self.snp.top).offset(40)
+            maker.left.equalTo(self.snp.left).offset(20)
+            maker.width.equalTo(40)
+            maker.height.equalTo(40)
+        }
+
+        self.favoriteButton.snp.makeConstraints { (maker) in
+            maker.bottom.equalTo(self.snp.bottom).offset(-20)
+            maker.left.equalTo(self.snp.left).offset(20)
+            maker.right.equalTo(self.snp.right).offset(-20)
+            maker.height.equalTo(50)
+        }
     }
 
-    func configureAdditional() {
+    public func configureAdditional() {
     }
 }
