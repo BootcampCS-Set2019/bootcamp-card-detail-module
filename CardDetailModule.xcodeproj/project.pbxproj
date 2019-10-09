@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38A76F49234E7CC6008B6143 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD47B425234E294100E189B9 /* Components.framework */; };
+		38A76F4A234E7CCA008B6143 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD47B429234E294700E189B9 /* Kingfisher.framework */; };
+		38A76F4B234E7CCC008B6143 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD47B427234E294300E189B9 /* Entities.framework */; };
+		38A76F4C234E7CD4008B6143 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD47B42F234E295B00E189B9 /* Resources.framework */; };
+		38A76F4D234E8F6E008B6143 /* CardDetailModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD27B7E8234E1FC300F0E8E4 /* CardDetailModule.framework */; };
+		38A76F4F234E8FC7008B6143 /* CardDetailModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD27B7E8234E1FC300F0E8E4 /* CardDetailModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38A76F56234E929F008B6143 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A76F55234E929F008B6143 /* Entities.framework */; };
+		38A76F57234E929F008B6143 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38A76F55234E929F008B6143 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38A76F58234E9E51008B6143 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD47B431234E295F00E189B9 /* SnapKit.framework */; };
 		BD27B7F2234E1FC300F0E8E4 /* CardDetailModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD27B7E8234E1FC300F0E8E4 /* CardDetailModule.framework */; };
 		BD27B7F7234E1FC300F0E8E4 /* CardDetailModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27B7F6234E1FC300F0E8E4 /* CardDetailModuleTests.swift */; };
 		BD27B7F9234E1FC300F0E8E4 /* CardDetailModule.h in Headers */ = {isa = PBXBuildFile; fileRef = BD27B7EB234E1FC300F0E8E4 /* CardDetailModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		38A76F50234E8FC7008B6143 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD27B7DF234E1FC300F0E8E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD27B7E7234E1FC300F0E8E4;
+			remoteInfo = CardDetailModule;
+		};
 		BD27B7F3234E1FC300F0E8E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD27B7DF234E1FC300F0E8E4 /* Project object */;
@@ -31,7 +47,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		38A76F52234E8FC7008B6143 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				38A76F4F234E8FC7008B6143 /* CardDetailModule.framework in Embed Frameworks */,
+				38A76F57234E929F008B6143 /* Entities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		38A76F55234E929F008B6143 /* Entities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Entities.framework; path = Carthage/Build/iOS/Entities.framework; sourceTree = "<group>"; };
 		BD27B7E8234E1FC300F0E8E4 /* CardDetailModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDetailModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD27B7EB234E1FC300F0E8E4 /* CardDetailModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDetailModule.h; sourceTree = "<group>"; };
 		BD27B7EC234E1FC300F0E8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +95,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A76F49234E7CC6008B6143 /* Components.framework in Frameworks */,
+				38A76F4A234E7CCA008B6143 /* Kingfisher.framework in Frameworks */,
+				38A76F4C234E7CD4008B6143 /* Resources.framework in Frameworks */,
+				38A76F4B234E7CCC008B6143 /* Entities.framework in Frameworks */,
+				38A76F58234E9E51008B6143 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A76F4D234E8F6E008B6143 /* CardDetailModule.framework in Frameworks */,
+				38A76F56234E929F008B6143 /* Entities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +126,7 @@
 		BD27B7DE234E1FC300F0E8E4 = {
 			isa = PBXGroup;
 			children = (
+				38A76F55234E929F008B6143 /* Entities.framework */,
 				BD27B7EA234E1FC300F0E8E4 /* CardDetailModule */,
 				BD27B7F5234E1FC300F0E8E4 /* CardDetailModuleTests */,
 				BD47B413234E286D00E189B9 /* Sample */,
@@ -208,7 +248,7 @@
 				BD27B7E4234E1FC300F0E8E4 /* Sources */,
 				BD27B7E5234E1FC300F0E8E4 /* Frameworks */,
 				BD27B7E6234E1FC300F0E8E4 /* Resources */,
-				BD47B433234E2D5400E189B9 /* ShellScript */,
+				BD47B433234E2D5400E189B9 /* Run Script */,
 				BD47B434234E2D6200E189B9 /* ShellScript */,
 			);
 			buildRules = (
@@ -247,10 +287,12 @@
 				BD47B40E234E286D00E189B9 /* Sources */,
 				BD47B40F234E286D00E189B9 /* Frameworks */,
 				BD47B410234E286D00E189B9 /* Resources */,
+				38A76F52234E8FC7008B6143 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				38A76F51234E8FC7008B6143 /* PBXTargetDependency */,
 			);
 			name = Sample;
 			productName = Sample;
@@ -327,7 +369,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BD47B433234E2D5400E189B9 /* ShellScript */ = {
+		BD47B433234E2D5400E189B9 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,6 +378,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -357,7 +400,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Repositories.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Entities.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Snapkit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -367,7 +410,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Repositories.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Entities.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Snapkit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -445,6 +488,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		38A76F51234E8FC7008B6143 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD27B7E7234E1FC300F0E8E4 /* CardDetailModule */;
+			targetProxy = 38A76F50234E8FC7008B6143 /* PBXContainerItemProxy */;
+		};
 		BD27B7F4234E1FC300F0E8E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BD27B7E7234E1FC300F0E8E4 /* CardDetailModule */;
@@ -601,7 +649,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DVMDCJRNKS;
+				DEVELOPMENT_TEAM = 3Z2YY3GRA3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -632,7 +680,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DVMDCJRNKS;
+				DEVELOPMENT_TEAM = 3Z2YY3GRA3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -698,9 +746,11 @@
 		BD47B421234E286E00E189B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DVMDCJRNKS;
+				DEVELOPMENT_TEAM = 3Z2YY3GRA3;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -716,9 +766,11 @@
 		BD47B422234E286E00E189B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DVMDCJRNKS;
+				DEVELOPMENT_TEAM = 3Z2YY3GRA3;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

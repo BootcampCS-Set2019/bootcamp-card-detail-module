@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CardDetailModule
+import Entities
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        window = UIWindow()
+//        window?.rootViewController = CardDetailModuleBuilder.buildRoot(card: Card(id: "", name: "", imageUrl: ""))
+//        window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }

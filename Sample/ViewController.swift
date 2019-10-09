@@ -8,6 +8,7 @@
 
 import UIKit
 import CardDetailModule
+import Entities
 
 class ViewController: UIViewController {
 
