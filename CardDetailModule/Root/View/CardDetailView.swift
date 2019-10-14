@@ -94,7 +94,16 @@ public class CardDetailView: UIView {
         guard let url = URL(string: imageUrl) else {
             return
         }
-        self.cardImage.downloaded(from: url)
+
+        self.cardImage.kf.setImage(with: url, placeholder: MagicDesignSystem.Assets.defaultCardArtboard) { result in
+            switch result {
+            case .failure:
+                self.cardImage.downloaded(from: url)
+            default:
+                break
+            }
+        }
+
 
         self.cardImage.accessibilityIdentifier = MagicDesignSystem
             .AccessibilityIdentifiers(componentType: .imageView,
