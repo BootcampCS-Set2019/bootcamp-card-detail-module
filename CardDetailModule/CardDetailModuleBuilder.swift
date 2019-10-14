@@ -9,7 +9,7 @@
 import Entities
 
 public class CardDetailModuleBuilder {
-    public static func buildRoot(card: Card) -> UIViewController {
+    public static func buildRoot(card: Card) -> CardDetailViewController {
         return CardDetailViewController(card: card)
     }
 }

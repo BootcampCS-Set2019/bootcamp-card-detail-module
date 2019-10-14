@@ -5,8 +5,6 @@
 //  Created by matheus.filipe.bispo on 09/10/19.
 //  Copyright © 2019 BootcampCS-Set2019. All rights reserved.
 //
-
-import UIKit
 import CardDetailModule
 import Entities
 
@@ -17,10 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        window = UIWindow()
-//        window?.rootViewController = CardDetailModuleBuilder.buildRoot(card: Card(id: "", name: "", imageUrl: ""))
-//        window?.makeKeyAndVisible()
-        // Override point for customization after application launch.
+
+        let window = UIWindow(frame: UIScreen.main.bounds)
+
+        let viewController = CardDetailModuleBuilder.buildRoot(card: Card(id: "", name: "", imageUrl: ""))
+        viewController.delegate = self
+        window.rootViewController = viewController
+
+        self.window = window
+        window.makeKeyAndVisible()
+
         return true
     }
 
@@ -33,4 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {}
 
     func applicationWillTerminate(_ application: UIApplication) {}
+}
+
+extension AppDelegate: CardDetailControllerDelegate {
+    func didFavoriteButtonWasTapped(card: Card) {
+        print("favoritei")
+    }
 }

@@ -7,11 +7,17 @@
 //
 import Entities
 
-class CardDetailViewController: UIViewController {
+public protocol CardDetailControllerDelegate: class {
+    func didFavoriteButtonWasTapped(card: Card)
+}
 
-    let presenter = CardDetailPresenter()
-    let mainView = CardDetailView()
-    var card: Card
+public class CardDetailViewController: UIViewController {
+
+    private let presenter = CardDetailPresenter()
+    private let mainView = CardDetailView()
+    private var card: Card
+
+    public weak var delegate: CardDetailControllerDelegate?
 
     init(card: Card) {
         self.card = card
@@ -26,9 +32,10 @@ class CardDetailViewController: UIViewController {
         self.view = mainView
 
         mainView.closeButton.addTarget(self, action: #selector(closeView), for: .touchUpInside)
+        mainView.favoriteButton.addTarget(self, action: #selector(favoriteButton), for: .touchUpInside)
     }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         self.mainView.viewModel = CardDetailViewModel(card: self.card)
@@ -36,5 +43,9 @@ class CardDetailViewController: UIViewController {
 
     @objc func closeView() {
         self.dismiss(animated: true)
+    }
+
+    @objc func favoriteButton() {
+        delegate?.didFavoriteButtonWasTapped(card: card)
     }
 }

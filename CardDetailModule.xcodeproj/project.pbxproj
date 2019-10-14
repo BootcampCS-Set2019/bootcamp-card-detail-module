@@ -13,17 +13,13 @@
 		38A76F4C234E7CD4008B6143 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD47B42F234E295B00E189B9 /* Resources.framework */; };
 		38A76F4D234E8F6E008B6143 /* CardDetailModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD27B7E8234E1FC300F0E8E4 /* CardDetailModule.framework */; };
 		38A76F4F234E8FC7008B6143 /* CardDetailModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD27B7E8234E1FC300F0E8E4 /* CardDetailModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		38A76F56234E929F008B6143 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A76F55234E929F008B6143 /* Entities.framework */; };
-		38A76F57234E929F008B6143 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38A76F55234E929F008B6143 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38A76F58234E9E51008B6143 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD47B431234E295F00E189B9 /* SnapKit.framework */; };
+		BD0029832354B38D009CCEA2 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD0029822354B38D009CCEA2 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BD27B7F2234E1FC300F0E8E4 /* CardDetailModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD27B7E8234E1FC300F0E8E4 /* CardDetailModule.framework */; };
 		BD27B7F7234E1FC300F0E8E4 /* CardDetailModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27B7F6234E1FC300F0E8E4 /* CardDetailModuleTests.swift */; };
 		BD27B7F9234E1FC300F0E8E4 /* CardDetailModule.h in Headers */ = {isa = PBXBuildFile; fileRef = BD27B7EB234E1FC300F0E8E4 /* CardDetailModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD47B415234E286D00E189B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47B414234E286D00E189B9 /* AppDelegate.swift */; };
-		BD47B417234E286D00E189B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47B416234E286D00E189B9 /* ViewController.swift */; };
-		BD47B41A234E286D00E189B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD47B418234E286D00E189B9 /* Main.storyboard */; };
 		BD47B41C234E286E00E189B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD47B41B234E286E00E189B9 /* Assets.xcassets */; };
-		BD47B41F234E286E00E189B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD47B41D234E286E00E189B9 /* LaunchScreen.storyboard */; };
 		BD47B441234E39F700E189B9 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47B440234E39F700E189B9 /* CardDetailViewController.swift */; };
 		BD47B446234E3A0200E189B9 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47B443234E3A0200E189B9 /* CardDetailView.swift */; };
 		BD47B447234E3A0200E189B9 /* CardDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD47B445234E3A0200E189B9 /* CardDetailPresenter.swift */; };
@@ -55,7 +51,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				38A76F4F234E8FC7008B6143 /* CardDetailModule.framework in Embed Frameworks */,
-				38A76F57234E929F008B6143 /* Entities.framework in Embed Frameworks */,
+				BD0029832354B38D009CCEA2 /* Entities.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,7 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		38A76F55234E929F008B6143 /* Entities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Entities.framework; path = Carthage/Build/iOS/Entities.framework; sourceTree = "<group>"; };
+		BD0029822354B38D009CCEA2 /* Entities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Entities.framework; sourceTree = "<group>"; };
 		BD27B7E8234E1FC300F0E8E4 /* CardDetailModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardDetailModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD27B7EB234E1FC300F0E8E4 /* CardDetailModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDetailModule.h; sourceTree = "<group>"; };
 		BD27B7EC234E1FC300F0E8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,10 +68,7 @@
 		BD27B7F8234E1FC300F0E8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD47B412234E286D00E189B9 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD47B414234E286D00E189B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD47B416234E286D00E189B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BD47B419234E286D00E189B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD47B41B234E286E00E189B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BD47B41E234E286E00E189B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD47B420234E286E00E189B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD47B425234E294100E189B9 /* Components.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Components.framework; path = Carthage/Build/iOS/Components.framework; sourceTree = "<group>"; };
 		BD47B427234E294300E189B9 /* Entities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Entities.framework; path = Carthage/Build/iOS/Entities.framework; sourceTree = "<group>"; };
@@ -116,7 +109,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38A76F4D234E8F6E008B6143 /* CardDetailModule.framework in Frameworks */,
-				38A76F56234E929F008B6143 /* Entities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +118,7 @@
 		BD27B7DE234E1FC300F0E8E4 = {
 			isa = PBXGroup;
 			children = (
-				38A76F55234E929F008B6143 /* Entities.framework */,
+				BD0029822354B38D009CCEA2 /* Entities.framework */,
 				BD27B7EA234E1FC300F0E8E4 /* CardDetailModule */,
 				BD27B7F5234E1FC300F0E8E4 /* CardDetailModuleTests */,
 				BD47B413234E286D00E189B9 /* Sample */,
@@ -169,10 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				BD47B414234E286D00E189B9 /* AppDelegate.swift */,
-				BD47B416234E286D00E189B9 /* ViewController.swift */,
-				BD47B418234E286D00E189B9 /* Main.storyboard */,
 				BD47B41B234E286E00E189B9 /* Assets.xcassets */,
-				BD47B41D234E286E00E189B9 /* LaunchScreen.storyboard */,
 				BD47B420234E286E00E189B9 /* Info.plist */,
 			);
 			path = Sample;
@@ -360,9 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD47B41F234E286E00E189B9 /* LaunchScreen.storyboard in Resources */,
 				BD47B41C234E286E00E189B9 /* Assets.xcassets in Resources */,
-				BD47B41A234E286D00E189B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +467,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD47B417234E286D00E189B9 /* ViewController.swift in Sources */,
 				BD47B415234E286D00E189B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,25 +485,6 @@
 			targetProxy = BD27B7F3234E1FC300F0E8E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BD47B418234E286D00E189B9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD47B419234E286D00E189B9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BD47B41D234E286E00E189B9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD47B41E234E286E00E189B9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BD27B7FA234E1FC300F0E8E4 /* Debug */ = {
@@ -649,7 +616,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3Z2YY3GRA3;
+				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -680,7 +647,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3Z2YY3GRA3;
+				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -749,7 +716,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3Z2YY3GRA3;
+				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -769,7 +736,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3Z2YY3GRA3;
+				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

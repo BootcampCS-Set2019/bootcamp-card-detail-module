@@ -1,0 +1,11 @@
+framework module Repositories {
+  umbrella header "Repositories.h"
+
+  export *
+  module * { export * }
+}
+
+module Repositories.Swift {
+    header "Repositories-Swift.h"
+    requires objc
+}

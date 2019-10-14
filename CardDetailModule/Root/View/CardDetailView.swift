@@ -90,8 +90,12 @@ public class CardDetailView: UIView {
         guard let imageUrl = viewModelAux.card.imageUrl else {
             return
         }
-        let url = URL(string: imageUrl)
-        self.cardImage.kf.setImage(with: url)
+
+        guard let url = URL(string: imageUrl) else {
+            return
+        }
+        self.cardImage.downloaded(from: url)
+
         self.cardImage.accessibilityIdentifier = MagicDesignSystem
             .AccessibilityIdentifiers(componentType: .imageView,
                                       additionalName: nil,
@@ -146,5 +150,8 @@ extension CardDetailView: ViewCodable {
     }
 
     public func configureAdditional() {
+        self.cardImage.image = MagicDesignSystem.Assets.defaultCardArtboard
+        self.cardImage.backgroundColor = .clear
+        self.cardImage.layer.cornerRadius = 8
     }
 }
